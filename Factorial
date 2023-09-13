@@ -1,0 +1,22 @@
+public class CalculoFactorial {
+    public static long calcularFactorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("El factorial no está definido para números negativos.");
+        }
+        
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * calcularFactorial(n - 1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        int numero = 5; // Cambia este valor por el número del cual quieres calcular el factorial
+        long resultado = calcularFactorial(numero);
+        System.out.println("==================================");
+        System.out.println("ESTUDIANTE: Heydi Chaiña Velasquez");
+        System.out.println("==================================");
+        System.out.println("El factorial de " + numero + " es " + resultado);
+    }
+}
